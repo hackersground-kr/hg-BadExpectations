@@ -65,6 +65,59 @@ export const BookBox = styled.div`
     background: #FFF;
 `
 
+export const BookBoxTitle = styled.div`
+    color: #000;
+
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 0.2px;
+
+    margin: 10px  0 0 20px;
+`
+
+export const BookBoxName = styled.div`
+    color: #727272;
+
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 0.2px;
+
+    margin: -23px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+`
+
+export const BookBoxDate = styled.div`
+    color: #828282;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 0.2px;
+
+    margin: 10px 0 0 20px;
+`
+
+export const BookBoxPeople = styled.div`
+    color: #828282;
+
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 0.2px;
+
+    margin: -53px 0 0 140px;
+`
+
 export const MyPopularTrip = styled.div`
     color: #000;
     font-family: Pretendard;
@@ -97,4 +150,44 @@ export const MyPopularTripBox = styled.div`
 
     border-radius: 13px;
     border: 1px solid #DEDEDE;
+`
+
+export const MyPopularTripBoxTitle = styled.div`
+    color: #000;
+
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 0.2px;
+
+    margin: 20px  0 0 20px;
+`
+
+export const MyPopularTripBoxBook = styled.div`
+    color: #828282;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 0.2px;
+    
+    margin: 0 0 0 20px;
+`
+
+export const MyPopularTripBoxRating = styled.div`
+    color: #000;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 16.9px */
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 20px;
+    margin-top: -23px;
 `
