@@ -1,18 +1,22 @@
 import React from "react";
 import * as S from "./style";
-import Polygon from "../../assets/Polygon 2.png";
-import logo from "../../assets/logo.svg";
+import Polygon from "../../../assets/Polygon 2.png";
+import logo from "../../../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 
 const Auth = ()=>{
+    const navigate = useNavigate();
+
+
     return(
         <S.auth>
             <S.main>
                 <S.loginText>
-                    <h2>로그인 하기</h2>
+                    <h2>역활 선택하기</h2>
                 </S.loginText>
                 <S.buttonMain>
-                    <S.userButton>
+                    <S.userButton onClick={()=>navigate("/login")}>
                         <p>사용자</p>
                     </S.userButton>
                     <S.userButton>

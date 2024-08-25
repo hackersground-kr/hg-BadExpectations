@@ -3,14 +3,14 @@ import {useLocation} from "react-router-dom";
 import headerLogo from "../../assets/headerLogo.svg";
 import userIcon from "../../assets/userIcon.svg";
 
-const Header: React.FC = () => {
+const Header = () => {
 
     const location = useLocation();
 
     return (
         <>
             {
-                (location.pathname !== "/sign" && !location.pathname.includes("host")) && <div style={{
+                (location.pathname !== "/sign" && !location.pathname.includes("host")) &&  location.pathname !== "/login" && location.pathname !== "/sign/guide"&& location.pathname !== "/sign/consumer" && <div style={{
                     display: "flex",
                     width: 393,
                     height: 124,
