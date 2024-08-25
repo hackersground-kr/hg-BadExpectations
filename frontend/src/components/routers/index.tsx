@@ -8,6 +8,7 @@ import Login from "../auth/login/index";
 import GuideSinUp from "../auth/guide";
 import ConsumerSignUp from "../auth/consumer";
 
+import Home from "../../page/home";
 
 const Router=()=>{
     return(
@@ -16,12 +17,13 @@ const Router=()=>{
             <HostHeader/>
             <Routes>
                 <Route path="/sign" element={<Auth />}/>
-
                 <Route path = "hosthome" element = {<HostHome/>}/>
 
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/sing/guide" element={<GuideSinUp/>}/>
                 <Route path="/sing/consumer" element={<ConsumerSignUp/>}/>
+                <Route path = "hostmain" element = {<HostHome/>}/>
+                <Route path="/home" element={<Home />}/>
             </Routes>
         </BrowserRouter>
     )
