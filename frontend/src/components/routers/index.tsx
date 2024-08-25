@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route , Routes } from "react-router-dom";
-import Auth from "../../page/auth";
 import HostHome from "../../page/host-home/index";
-
-import Header from "../headers";
 import HostHeader from "../headers/host-header/index"
+import Header from "../headers";
+import Auth from "../auth/start";
+import Login from "../auth/login/index";
+import GuideSinUp from "../auth/guide";
+import ConsumerSignUp from "../auth/consumer";
+
 
 const Router=()=>{
     return(
@@ -15,6 +18,10 @@ const Router=()=>{
                 <Route path="/sign" element={<Auth />}/>
 
                 <Route path = "hosthome" element = {<HostHome/>}/>
+
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/sing/guide" element={<GuideSinUp/>}/>
+                <Route path="/sing/consumer" element={<ConsumerSignUp/>}/>
             </Routes>
         </BrowserRouter>
     )
