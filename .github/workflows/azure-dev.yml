@@ -49,7 +49,7 @@ jobs:
             --tenant-id "$AZURE_TENANT_ID"
 
       - name: Log in with Azure (Client Credentials)
-        if: ${{ secrets.AZURE_CREDENTIALS }}
+        if: ${{ env.AZURE_CREDENTIALS }}
         run: |
           $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable
           Write-Host "::add-mask::$($info.clientSecret)"
