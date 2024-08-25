@@ -11,52 +11,44 @@ declare global {
 
 const Home = () => {
 
+    const markAdd = (N : number, E : number, isStartRoute : boolean, map : any) => {
+        const imageSrcStart = makerImg,
+            imageSizeStart = new window.kakao.maps.Size(33, 33),
+            imageOptionStart = {offset: new window.kakao.maps.Point(27, 69)};
+        const imageSrc = makerImg,
+            imageSize = new window.kakao.maps.Size(29, 29),
+            imageOption = {offset: new window.kakao.maps.Point(27, 69)};
+        const markerImageStart = new window.kakao.maps.MarkerImage(imageSrcStart, imageSizeStart, imageOptionStart);
+        const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+
+        let markerPosition = new window.kakao.maps.LatLng(N, E);
+        if(isStartRoute) {
+            let marker = new window.kakao.maps.Marker({
+                position: markerPosition,
+                image: markerImageStart,
+            });
+            marker.setMap(map);
+        } else {
+            let marker = new window.kakao.maps.Marker({
+                position: markerPosition,
+                image: markerImage
+            });
+            marker.setMap(map);
+        }
+    }
+
     useEffect(() => {
         let container = document.getElementById(`map`); // 지도를 담을 영역의 DOM 레퍼런스
         let options = {
             center: new window.kakao.maps.LatLng(36.3527164442425, 128.607077816076), // 지도 중심 좌표
-            level: 11, // 지도의 레벨(확대, 축소 정도)
+            level: 10, // 지도의 레벨(확대, 축소 정도)
         };
 
         let map = new window.kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
 
-        var imageSrc = makerImg,
-            imageSize = new window.kakao.maps.Size(29, 29),
-            imageOption = {offset: new window.kakao.maps.Point(27, 69)};
+        markAdd(36.42,128.60,true,map);
+        markAdd(36.50,128.30,true,map);
 
-        var markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-            markerPosition = new window.kakao.maps.LatLng(36.39, 128.60),
-            markerPosition1 = new window.kakao.maps.LatLng(36.43, 128.80),
-            markerPosition2 = new window.kakao.maps.LatLng(36.24, 128.31),
-            markerPosition3 = new window.kakao.maps.LatLng(36.51, 128.54),
-            markerPosition4 = new window.kakao.maps.LatLng(36.09, 128.40);
-
-        var marker = new window.kakao.maps.Marker({
-            position: markerPosition,
-            image: markerImage // 마커이미지 설정
-        });
-        var marker1 = new window.kakao.maps.Marker({
-            position: markerPosition1,
-            image: markerImage // 마커이미지 설정
-        });
-        var marker2 = new window.kakao.maps.Marker({
-            position: markerPosition2,
-            image: markerImage // 마커이미지 설정
-        });
-        var marker3 = new window.kakao.maps.Marker({
-            position: markerPosition3,
-            image: markerImage // 마커이미지 설정
-        });
-        var marker4 = new window.kakao.maps.Marker({
-            position: markerPosition4,
-            image: markerImage // 마커이미지 설정
-        });
-
-        marker.setMap(map);
-        marker1.setMap(map);
-        marker2.setMap(map);
-        marker3.setMap(map);
-        marker4.setMap(map);
     }, []);
 
     return (
