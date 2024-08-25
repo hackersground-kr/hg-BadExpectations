@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useLocation} from "react-router-dom";
 import headerLogo from "../../assets/headerLogo.svg";
+import userIcon from "../../assets/userIcon.svg";
 
 const Header: React.FC = () => {
 
@@ -9,7 +10,7 @@ const Header: React.FC = () => {
     return (
         <>
             {
-                location.pathname !== "/sign" && <div style={{
+                (location.pathname !== "/sign" || location.pathname.includes("host")) && <div style={{
                     display: "flex",
                     width: 393,
                     height: 124,
@@ -19,7 +20,10 @@ const Header: React.FC = () => {
                     // backgroundColor: "#F0F0F0",
                 }}>
                     <div style={{display: "flex", flexDirection: "column", width: 304, height: 78}}>
-                        <img src={headerLogo} alt="Logo" style={{width: 98, height: 28, marginLeft: 5}}/>
+                        <div style={{display: "flex", flexDirection: "row", width: 98, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
+                            <img src={headerLogo} alt="Logo" style={{width: 26, height: 28, marginLeft: 5}}/>
+                            <text style={{fontSize: 16, fontWeight: '800', color: "#FFA800"}}>의성올래</text>
+                        </div>
                         <div style={{width: 1, height: 25}}></div>
                         <div style={{
                             display: 'flex',
@@ -64,7 +68,7 @@ const Header: React.FC = () => {
                                 </a>
                             </div>
                             <a href="/profile">
-                                <img src="https://i.ibb.co/BcXcg8j/Vector.png" alt="Navigation"
+                                <img src={userIcon} alt="Navigation"
                                      style={{width: 23, height: 23}}/>
                             </a>
                         </div>
