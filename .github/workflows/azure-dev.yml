@@ -36,7 +36,6 @@ jobs:
           distribution: 'temurin'
       - name: Build with Gradle
         run: |
-          cd server
           ./gradlew build -x test
 
 
