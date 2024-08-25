@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route , Routes } from "react-router-dom";
 import Auth from "../../page/auth";
+import HostHome from "../../page/host-home/index";
 import Header from "../headers";
 
 const Router=()=>{
@@ -9,6 +10,8 @@ const Router=()=>{
             <Header/>
             <Routes>
                 <Route path="/sign" element={<Auth />}/>
+
+                <Route path = "hostmain" element = {<HostHome/>}/>
             </Routes>
         </BrowserRouter>
     )
