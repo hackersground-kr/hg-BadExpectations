@@ -48,8 +48,7 @@ jobs:
 
       - name: Log in to Azure Container Registry
         run: |
-          echo ${{ env.AZURE_CREDENTIALS }} | docker login acrtd2paiyvckrz2.azurecr.io --username ${{ env.AZURE_CLIENT_ID }} --password-stdin
-
+          docker login acrtd2paiyvckrz2.azurecr.io --username "${{ secrets.AZURE_CLIENT_ID }}" --password "${{ secrets.AZURE_CLIENT_SECRET }}"
       - name: Push Docker image to Azure Container Registry
         run: |
           docker push acrtd2paiyvckrz2.azurecr.io/dongbao/uiseong-come-on:latest
