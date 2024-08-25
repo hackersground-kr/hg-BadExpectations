@@ -55,6 +55,6 @@ jobs:
       - name: Deploy to Azure Container Apps
         run: |
           az containerapp update \
-          --name hackerground-app \
+          --name ca-hackerground-hhn6znikr62lw  \
           --resource-group BadExpectations \
           --image acrtd2paiyvckrz2.azurecr.io/your-image-name:latest
