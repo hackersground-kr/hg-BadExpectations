@@ -11,7 +11,7 @@ const Router=()=>{
             <Routes>
                 <Route path="/sign" element={<Auth />}/>
 
-                <Route path = "hostmain" element = {<HostHome/>}/>
+                <Route path = "hosthome" element = {<HostHome/>}/>
             </Routes>
         </BrowserRouter>
     )

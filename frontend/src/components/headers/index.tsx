@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     return (
         <>
             {
-                (location.pathname !== "/sign" || location.pathname.includes("host")) && <div style={{
+                (location.pathname !== "/sign" && !location.pathname.includes("host")) && <div style={{
                     display: "flex",
                     width: 393,
                     height: 124,
