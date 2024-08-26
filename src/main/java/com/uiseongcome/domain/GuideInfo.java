@@ -41,12 +41,23 @@ public class GuideInfo {
 
     private Boolean parking;
 
+    private Long bedCnt;
+
+    private Long bathroomCnt;
+
+    private Long roomCnt;
+
+    private String address;
+
+    @Enumerated(EnumType.STRING)
+    private GuideKind guideKind;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_user_id")
     private User user;
 
     @Builder
-    public GuideInfo(Long guideInfoId, String title, LocalDate startAt, LocalDate endAt, Long limitPeople, Long price, String description, Boolean wifi, Boolean tv, Boolean kitchen, Boolean washingMachine, Boolean airConditioner, Boolean parking, User user) {
+    public GuideInfo(Long guideInfoId, String title, LocalDate startAt, LocalDate endAt, Long limitPeople, Long price, String description, Boolean wifi, Boolean tv, Boolean kitchen, Boolean washingMachine, Boolean airConditioner, Boolean parking, Long bedCnt, Long bathroomCnt, Long roomCnt, String address, GuideKind guideKind, User user) {
         this.guideInfoId = guideInfoId;
         this.title = title;
         this.startAt = startAt;
@@ -60,6 +71,11 @@ public class GuideInfo {
         this.washingMachine = washingMachine;
         this.airConditioner = airConditioner;
         this.parking = parking;
+        this.bedCnt = bedCnt;
+        this.bathroomCnt = bathroomCnt;
+        this.roomCnt = roomCnt;
+        this.address = address;
+        this.guideKind = guideKind;
         this.user = user;
     }
 }
