@@ -37,6 +37,19 @@ jobs:
         run: |
           ./gradlew build -x test
 
+      - name: Build Docker image
+        run: |
+          docker build -t dongbao/uiseong-come-on:latest .
+
+      - name: Log in to Azure Container Registry
+        run: |
+          echo ${{ secrets.AZURE_CREDENTIALS }} | docker login acrtd2paiyvckrz2.azurecr.io --username $(jq -r '.clientId' /tmp/azure_credentials.json) --password $(jq -r '.clientSecret' /tmp/azure_credentials.json)
+
+      - name: Push Docker image to Azure Container Registry
+        run: |
+          docker tag dongbao/uiseong-come-on:latest acrtd2paiyvckrz2.azurecr.io/dongbao/uiseong-come-on:latest
+          docker push acrtd2paiyvckrz2.azurecr.io/dongbao/uiseong-come-on:latest
+
       - name: Install azd
         uses: Azure/setup-azd@v1.0.0
 
@@ -49,7 +62,7 @@ jobs:
             --tenant-id "$AZURE_TENANT_ID"
 
       - name: Log in with Azure (Client Credentials)
-        if: ${{ env.AZURE_CREDENTIALS }}
+        if: ${{ secrets.AZURE_CREDENTIALS }}
         run: |
           $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable
           Write-Host "::add-mask::$($info.clientSecret)"
@@ -62,7 +75,6 @@ jobs:
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
-
       - name: Provision Infrastructure
         run: azd provision --no-prompt
         env:
@@ -70,13 +82,3 @@ jobs:
 
       - name: Deploy Application
         run: azd deploy --no-prompt
-
-      - name: Install Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose
-
-      - name: Run Docker Compose
-        run: |
-          docker-compose up -d
-        working-directory: .
