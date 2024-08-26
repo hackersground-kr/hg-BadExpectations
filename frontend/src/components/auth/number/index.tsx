@@ -7,32 +7,33 @@ import { useAtom } from "jotai";
 import { authType } from "../../../store/authtype/authtype.atom";
 import { useNavigate } from "react-router-dom";
 
-const Login = ()=>{
+
+const Number = ()=>{
     const navigate = useNavigate();
     const [AuthValid, setAuthValid] = useAtom(authType);
     const consumerAuth = ()=>{
         setAuthValid((prev)=>!prev);
+        
+            navigate("/login")
+        
     }
 return(
     <S.login>
     <Auth.main>
-        <S.loginText>
-                    <h2>반가워요!</h2>
-                </S.loginText>
+        <Auth.loginText>
+                    <h2>안녕하세요</h2>
+                </Auth.loginText>
                 <S.buttonMain>
-                    <S.textFieldWrap>
-                        <S.textField placeholder="아이디를 입력해주세요" />
-                    </S.textFieldWrap>
-                    <S.textFieldWrap >
-                        <S.textField type="password" placeholder="비밀번호를 입력해주세요" />
+                <S.textFieldWrap>
+                        <S.textField placeholder="전화번호를 입력해주세요" />
                     </S.textFieldWrap>
                     <S.bottomWarp>
-                    <S.startButton onClick={()=>navigate("/home")}>시작</S.startButton>
+                    <S.startButton onClick={()=>navigate("/login")}>회원가입</S.startButton>
                     <S.navText>
-                        <span onClick={()=>navigate("/sign/name")}>회원가입 하러 가기</span>
+                        
+                        <span onClick={()=>navigate("/sign")}>로그인 하러 가기</span>
                     </S.navText>
                     </S.bottomWarp>
-                    
                 </S.buttonMain>
                 
                 <img src={Polygon}></img>
@@ -45,4 +46,4 @@ return(
     </S.login>
 )
 }
-export default Login
+export default Number

@@ -5,8 +5,9 @@ import HostHeader from "../headers/host-header/index"
 import Header from "../headers";
 import Auth from "../auth/start";
 import Login from "../auth/login/index";
-import GuideSinUp from "../auth/guide";
-import ConsumerSignUp from "../auth/consumer";
+import Name from "../auth/name";
+import Number from "../auth/number/index";
+import Default from "../auth/default";
 
 import Home from "../../page/home";
 
@@ -18,10 +19,10 @@ const Router=()=>{
             <Routes>
                 <Route path="/sign" element={<Auth />}/>
                 <Route path = "hosthome" element = {<HostHome/>}/>
-
+                <Route path="/signup" element={<Default/>}/> 
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/sing/guide" element={<GuideSinUp/>}/>
-                <Route path="/sing/consumer" element={<ConsumerSignUp/>}/>
+                <Route path="/sign/name" element={<Name/>}/>
+                <Route path="/sign/number" element={<Number/>}/>
                 <Route path = "hostmain" element = {<HostHome/>}/>
                 <Route path="/home" element={<Home />}/>
             </Routes>

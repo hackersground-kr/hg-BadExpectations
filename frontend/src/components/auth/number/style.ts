@@ -1,32 +1,7 @@
 import styled from "styled-components";
 
-export const loginText = styled.div`
-  margin-top: 30px;
-    display: flex;
-    width: 100%;
-    height: 100px;
-    justify-content: center;
-    h2{
-color: #FFA800;
-font-family: Pretendard;
-font-size: 32px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-    }
-`
-
-
-export const buttonMain = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 19px;
-    width: 100%;
-    height: 200px;
-`
 export const login = styled.div`
-    position: absolute;
+  position: absolute;
     top: 0;
     left: 0;
     width: 393px;
@@ -35,6 +10,8 @@ export const login = styled.div`
     flex-direction: column;
     align-items: center;
 `
+
+
 export const textFieldWrap = styled.div`
   width: 259px;
   height: 46px;
@@ -43,6 +20,7 @@ export const textFieldWrap = styled.div`
   background-color: #FFF;
 
 ` 
+
 export const textField = styled.input`
 margin-left: 13px;
   width: 90%;
@@ -63,7 +41,15 @@ margin-left: 13px;
   line-height: normal;
 	}
 `
-
+export const buttonMain = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 19px;
+    width: 100%;
+    height: 150px;
+`
 export const startButton = styled.div`
   display: flex;
   width: 259px;

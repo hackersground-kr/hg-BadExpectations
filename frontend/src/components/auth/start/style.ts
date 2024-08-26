@@ -45,7 +45,7 @@ align-items: center;
  height: 184px;
 `
 export const loginText = styled.div`
-    margin-top: 92px;
+    margin-top: 80px;
     display: flex;
     width: 100%;
     height: 100px;
