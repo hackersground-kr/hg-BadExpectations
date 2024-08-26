@@ -2,7 +2,11 @@ version: '3.8'
 
 services:
   hackerground:
-    image: acrtd2paiyvckrz2.azurecr.io/dongbao/uiseong-come-on:latest
-    container_name: hackerground
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
     ports:
-      - "8080:8080"
+      - 8080:8080
+    networks:
+      - network
