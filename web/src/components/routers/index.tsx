@@ -16,7 +16,7 @@ import SearchQuestion from "../../page/search/question";
 
 const Router=()=>{
     return(
-        <BrowserRouter basename={process.env.PUBLIC_URL}>;
+        <BrowserRouter >
             <Header/>
             <HostHeader/>
             <Routes>
