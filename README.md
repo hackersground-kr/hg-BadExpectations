@@ -43,7 +43,8 @@
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
-> 
+>
+> <img width="729" alt="스크린샷 2024-08-26 오후 4 04 32" src="https://github.com/user-attachments/assets/a9e100dd-4b43-4e23-9a6e-b678b300ad49">
 > 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름 암호를 입력하고 네트워킹에서 방화벽 설정을 0.0.0.0~255.255.255.255로 설정한다. 그 후, 검토 및 만들기를 통해 DB를 만든다.
 > 
 > github에서 hackersground-kr organization의 hg-BadExpectations 레포지토리를 클릭한다.
