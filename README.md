@@ -102,26 +102,34 @@
 >
 ><img width="498" alt="스크린샷 2024-08-26 오후 4 58 58" src="https://github.com/user-attachments/assets/50bb8783-7850-4c0e-ac3f-14edbe3d6570">
 > 
-> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름을 입력하고 암호를 자유롭게 입력한다.
+> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름을 입력하고 암호를 자유롭게 입력한다. (중요 나중에 사용할 예정이니 잘 기억해두십시오)
 >
 ><img width="729" alt="스크린샷 2024-08-26 오후 4 04 32" src="https://github.com/user-attachments/assets/a9e100dd-4b43-4e23-9a6e-b678b300ad49">
 > 
 >
-> 네트워킹에서 방화벽 설정을 0.0.0.0~255.255.255.255로 설정한다. 
+> 네트워킹에서 방화벽 설정을 0.0.0.0~255.255.255.255클릭 하여 설정한다. 
 > 
 > 그 후, 검토 및 만들기를 통해 DB를 만든다.
 > 
-> github에서 hackersground-kr organization의 hg-BadExpectations 레포지토리를 클릭한다.
+> github에서[ hackersground-kr organization의 hg-BadExpectations](https://github.com/hackersground-kr/hg-BadExpectations) 레포지토리를 클릭한다.
 
 > <img width="1470" alt="스크린샷 2024-08-27 오전 12 59 50" src="https://github.com/user-attachments/assets/16a62baa-e1e5-4d70-91b5-6e8b72b2d375">
 
 > 오른쪽 흰색 박스의 Fork버튼을 눌러 Copy the main branch only 항목을 선택 취소한 후, Create fork 버튼을 눌러 fork를 한다.
 > 
-> fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https 칸을 클릭하여 https://github.com/dongchandev/hg-BadExpectations.git 을 복사한다.
+> fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https 칸을 클릭하여 https://github.com/ {자신의 깃이름} /hg-BadExpectations.git 을 복사한다.
 > 
-> 컴퓨터에 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 앞서 만든 폴더를 윈도우의 경우 shift + 우클릭하여 경로를 복사하고 맥의 경우 우클릭을 통해 정보보기를 클릭하여 경로를 복사하고 cd + / 를 한 후 cd + 복사한 경로를 입력해 git init을 입력한다. 그 후, 복사한 https://github.com/dongchandev/hg-BadExpectations.git 를 통해 git remote add origin https://github.com/dongchandev/hg-BadExpectations.git 을 적어 원격 브랜치와 연결한다.
+> 컴퓨터 배경화면에 test라는 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 맥은
+>
+><img width="413" alt="스크린샷 2024-08-27 오전 2 26 06" src="https://github.com/user-attachments/assets/10004f2e-1daa-4a53-a8a9-ccdb38a13e92">
+>
+> 이런식으로 cd Desktop/test을 처서 들어갑니다
+>
+> 윈도우같은 경우에는 명령 프롬포트(cmd)에서 cd Desktop/test르 입력하여 들어갑니다
+>그후 git init을 입력한다. 
+>그 후, 복사한 https://github.com/ {자신의 깃이름 } /hg-BadExpectations.git 를 통해 git remote add origin https://github.com/ {자신의 깃 이름} /hg-BadExpectations.git 을 적어 원격 브랜치와 연결한다.
 > 
-> git pull origin backend,git checkout backend 를 차례대로 입력한다.
+> git pull origin backend , git checkout backend 를 차례대로 입력한다.
 > 
 > 도커 데스크탑을 실행하여 도커 실행하기
 > 
