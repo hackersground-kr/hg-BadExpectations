@@ -19,7 +19,7 @@ const Default= () => {
             username,
             password
         }));
-        navigate("/sign/number");
+        navigate("/sign/number/");
     };
 
     return (
@@ -47,7 +47,7 @@ const Default= () => {
                     <S.bottomWarp>
                         <S.startButton onClick={handleNext}>다음</S.startButton>
                         <S.navText>
-                            <span onClick={() => navigate("/sign")}>로그인 하러 가기</span>
+                            <span onClick={() => navigate("/sign/")}>로그인 하러 가기</span>
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>
