@@ -21,11 +21,11 @@ const Auth = ()=>{
 
     const consumerAuth = ()=>{
         setAuthValid(true);
-        navigate("/login/");
+        navigate("/login");
     }
     const guideAuth = ()=>{
         setAuthValid(false);
-        navigate("/login/");
+        navigate("/login");
 
     }
     return(

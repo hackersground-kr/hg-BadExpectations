@@ -20,7 +20,7 @@ const Login = () => {
         );
         if (user) {
             setCurrentUser(user);
-            navigate("/home/");
+            navigate("/home");
         } else {
             alert("아이디 또는 비밀번호가 틀렸습니다.");
         }
@@ -51,7 +51,7 @@ const Login = () => {
                     <S.bottomWarp>
                         <S.startButton onClick={handleLogin}>시작</S.startButton>
                         <S.navText>
-                            <span onClick={() => navigate("/sign/name/")}>회원가입 하러 가기</span>
+                            <span onClick={() => navigate("/sign/name")}>회원가입 하러 가기</span>
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>

@@ -22,7 +22,7 @@ const Number = () => {
         setUsers([...users, newUser]);
         setCurrentUser(null);
 
-        navigate("/login/");
+        navigate("/login");
     };
 
     return (
@@ -42,7 +42,7 @@ const Number = () => {
                     <S.bottomWarp>
                         <S.startButton onClick={handleSignUp}>회원가입</S.startButton>
                         <S.navText>
-                            <span onClick={() => navigate("/sign/")}>로그인 하러 가기</span>
+                            <span onClick={() => navigate("/sign")}>로그인 하러 가기</span>
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>
