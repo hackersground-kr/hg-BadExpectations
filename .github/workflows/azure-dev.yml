@@ -17,9 +17,9 @@ jobs:
       AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
       AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
-      AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+      AZURE_RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-      AZURE_ENV_NAME: ${{ secrets.AZURE_ENV_NAME }}  # 환경 이름을 설정
+      AZURE_ENV_NAME: ${{ secrets.AZURE_ENV_NAME }}
 
     steps:
       - name: Checkout
@@ -68,7 +68,7 @@ jobs:
         shell: pwsh
 
       - name: Log in with Azure (Client Credentials)
-        if: ${{ secrets.AZURE_CREDENTIALS }}
+        if: ${{ env.AZURE_CREDENTIALS }}
         run: |
           $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable
           Write-Host "::add-mask::$($info.clientSecret)"
@@ -79,7 +79,7 @@ jobs:
             --tenant-id "$($info.tenantId)"
         shell: pwsh
         env:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+          AZURE_CREDENTIALS: ${{ env.AZURE_CREDENTIALS }}
 
       - name: Provision Infrastructure
         run: azd provision --environment ${{ env.AZURE_ENV_NAME }} --no-prompt
