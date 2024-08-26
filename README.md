@@ -135,7 +135,7 @@
 >그후 git init을 입력한다. 
 >그 후, 복사한 https://github.com/ {자신의 깃이름 } /hg-BadExpectations.git 를 통해 git remote add origin https://github.com/ {자신의 깃 이름} /hg-BadExpectations.git 을 적어 원격 브랜치와 연결한다.
 > 
-> git pull origin server , git checkout server 를 차례대로 입력한다.
+> git pull origin main , git checkout main 를 차례대로 입력한다.
 > 
 > 도커 데스크탑을 실행하여 도커 실행하기
 > 
