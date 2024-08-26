@@ -5,7 +5,7 @@ export const auth = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 393px;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -18,21 +18,22 @@ flex-direction: column;
 align-items: center;
 position: relative;
 margin-top: 100px;
-width: 309px;
+min-width: 309px;
+width: 40%;
 height: 376px;
 flex-shrink: 0;
 border-radius: 13px;
 background: #F8F8F8;
 img{
     position: absolute;
-    left: 120px;
+    left: calc(100vw - 80vw);
     bottom: -30px;
 }
 `
 export const logoMain = styled.div`
     display: flex;
     justify-content: end;
-    width: 309px;
+    min-width: 309px;
     height: 100%;
     padding: 30px;
 `
@@ -70,7 +71,8 @@ export const buttonMain = styled.div`
 export const userButton = styled.div`
 display: flex;
 cursor: pointer;
-width: 259px;
+min-width: 259px;
+width: 70%;
 height: 46px;
 border-radius: 13px;
 border: 1px #FFA800;

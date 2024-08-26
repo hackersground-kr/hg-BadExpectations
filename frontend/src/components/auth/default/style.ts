@@ -20,16 +20,19 @@ export const login = styled.div`
   position: absolute;
     top: 0;
     left: 0;
-    width: 393px;
+    min-width: 393px;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 `
 
 
 export const textFieldWrap = styled.div`
-  width: 259px;
+  min-width: 259px;
+  width: 70%;
   height: 46px;
   border-radius: 13px;
   border: 1px solid #FFA800;
@@ -68,7 +71,8 @@ export const buttonMain = styled.div`
 `
 export const startButton = styled.div`
   display: flex;
-  width: 259px;
+  min-width: 259px;
+  width: 70%;
   height: 46px;
   background-color: #FFA800;
   justify-content: center;

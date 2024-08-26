@@ -29,6 +29,7 @@ return(
                     <S.bottomWarp>
                     <S.startButton onClick={()=>navigate("/home")}>시작</S.startButton>
                     <S.navText>
+                        {AuthValid ? <span onClick={consumerAuth}>사용자 로그인 하러 가기</span> : <span onClick={consumerAuth}>지자체 로그인 하러 가기</span>}
                         <span onClick={()=>navigate("/sign/name")}>회원가입 하러 가기</span>
                     </S.navText>
                     </S.bottomWarp>
