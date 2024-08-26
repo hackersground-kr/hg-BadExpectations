@@ -51,6 +51,10 @@
 > mac(apple chip) : ARM64 DMG Installer 사용
 > 
 > mac(intel chip) : x64 DMG Installer 사용
+>
+> <hr/>
+>  **azure 로그인**
+> 
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 검색하여 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
@@ -97,3 +101,31 @@ gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 >해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
 > 
 > 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
+>
+><hr/>
+> **웹 배포**
+> 로그인 한 에저에서 검색창에 'marketplace'검색. 
+> <img width="1470" alt="Screenshot 2024-08-26 at 19 33 31" src="https://github.com/user-attachments/assets/d1f85523-92f4-4c51-bf12-fc5591e1efbd">
+
+마켓 플레이스에서 'Azure 서비스만' 선택 후 web app 검색하기 
+<img width="1470" alt="Screenshot 2024-08-26 at 19 34 04" src="https://github.com/user-attachments/assets/36d58e15-31c6-4673-8448-e21ccebd624b">
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 34 48" src="https://github.com/user-attachments/assets/04570118-e45c-49ef-abc7-41cea74095e0">
+만들기 선택
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 35 14" src="https://github.com/user-attachments/assets/29bf32d7-987c-4b0c-bc35-8af65d7e28d2">
+자신의 팀 이름 레파지토리 검색 ex)rg-BadExpectations
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 36 03" src="https://github.com/user-attachments/assets/4a310052-4242-49b2-8bc6-9cd557f5af8e">
+자신의 브랜치 선택하기 
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 36 24" src="https://github.com/user-attachments/assets/45f35bdb-fd66-4c64-ba69-9fb7407647a8">
+빌드 세부 정보를 React로 변경
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 36 46" src="https://github.com/user-attachments/assets/6b8a3eb4-ecb2-4dec-abce-48c49ae4766b">
+East Asia 기본 설정 유지
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 37 21" src="https://github.com/user-attachments/assets/e7618df7-1aa3-4277-9089-a9b67b17595a">
+자신이 기억할 수 있는 쉬운 단어로 정리
+
+<img width="1470" alt="Screenshot 2024-08-26 at 19 38 25" src="https://github.com/user-attachments/assets/c6b34590-626d-4656-bf2c-e88301baa672">
