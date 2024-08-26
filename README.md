@@ -29,6 +29,7 @@
 > **docker desktop 설치**
 > 
 > mac : https://docs.docker.com/desktop/install/mac-install/
+> 
 > 인텔칩을 사용중이라면 인텔칩 도커 사용(대부분 인텔 스티커가 붙어 있음)
 > 그가 아니라면 애플 실리콘칩 도커 사용
 > 
