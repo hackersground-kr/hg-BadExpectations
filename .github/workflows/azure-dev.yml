@@ -29,6 +29,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Inject Secrets into YAML
+        run: |
+          sed -i 's#{DB_URL}#${{ secrets.DB_URL }}#' server/src/main/resources/application.yml
+          sed -i 's#{DB_USERNAME}#${{ secrets.DB_USERNAME }}#' server/src/main/resources/application.yml
+          sed -i 's#{DB_PASSWORD}#${{ secrets.DB_PASSWORD }}#' server/src/main/resources/application.yml
+
       - name: Build with Gradle
         run: |
           cd server
