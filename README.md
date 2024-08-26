@@ -115,10 +115,16 @@
 
 > <img width="1470" alt="스크린샷 2024-08-27 오전 12 59 50" src="https://github.com/user-attachments/assets/16a62baa-e1e5-4d70-91b5-6e8b72b2d375">
 
+>
+
 > 오른쪽 흰색 박스의 Fork버튼을 눌러 Copy the main branch only 항목을 선택 취소한 후, Create fork 버튼을 눌러 fork를 한다.
-> 
+>
+> <img width="1470" alt="스크린샷 2024-08-27 오전 4 08 47" src="https://github.com/user-attachments/assets/c131fc89-ab4c-4543-ba93-1f938d4172cd">
+
 > fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https 칸을 클릭하여 https://github.com/ {자신의 깃이름} /hg-BadExpectations.git 을 복사한다.
-> 
+
+> <img width="1470" alt="스크린샷 2024-08-27 오전 4 11 00" src="https://github.com/user-attachments/assets/46bd1bea-efa7-4135-97f5-97928db60e60">
+
 > 컴퓨터 배경화면에 test라는 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 맥은
 >
 ><img width="413" alt="스크린샷 2024-08-27 오전 2 26 06" src="https://github.com/user-attachments/assets/10004f2e-1daa-4a53-a8a9-ccdb38a13e92">
