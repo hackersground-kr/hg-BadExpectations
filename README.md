@@ -1,4 +1,4 @@
-<img width="1468" alt="스크린샷 2024-08-27 오전 2 00 50" src="https://github.com/user-attachments/assets/f61db6d2-6b2f-46d1-939f-dce0f3eb659f"><img width="719" alt="스크린샷 2024-08-27 오전 1 55 55" src="https://github.com/user-attachments/assets/57e1c3f3-1ed8-430e-8988-e6614af819f2"># 나쁜기대치 - 의성올래
+# 나쁜기대치 - 의성올래
 
 해커그라운드 해커톤에 참여하는 나쁜기대치 팀의 의성올래입니다.
 
@@ -65,7 +65,7 @@
 >그후 질문에 대한 답들을 적어주면 됩니다
 >마지막 동의 까지 하고 초록 버튼 클릭
 >
-> <img width="1345" alt="스크린샷 2024-08-27 오전 1 52 35 2" src="https://github.com/user-attachments/assets/17ad2d2b-0c91-448b-9a7c-fdea9c2d64b1">
+> <img width="719" alt="스크린샷 2024-08-27 오전 1 55 55" src="https://github.com/user-attachments/assets/57e1c3f3-1ed8-430e-8988-e6614af819f2">
 >이메일로 받은 코드를 이곳에다가 작성합니다
 >
 > <img width="738" alt="스크린샷 2024-08-27 오전 1 56 52" src="https://github.com/user-attachments/assets/6aaa7492-689a-40ec-afbf-a66c3fcf2e23">
