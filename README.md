@@ -50,7 +50,7 @@
 > mac(intel chip) : x64 DMG Installer 사용
 
 ## 시작하기
-> https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
+> https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 검색하여 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
 >
 ><img width="498" alt="스크린샷 2024-08-26 오후 4 58 58" src="https://github.com/user-attachments/assets/50bb8783-7850-4c0e-ac3f-14edbe3d6570">
 > 
