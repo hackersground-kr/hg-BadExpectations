@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const AllContainer = styled.div`
  padding: 0px 30px 0 30px;
+
+ margin-bottom: 80px;
 `
 
 export const ChallengeBoxWrap = styled.div`
