@@ -51,17 +51,14 @@
 > mac(apple chip) : ARM64 DMG Installer 사용
 > 
 > mac(intel chip) : x64 DMG Installer 사용
->
-> <hr/>
->  **azure 로그인**
-> 
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 검색하여 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
+> ![image](https://github.com/user-attachments/assets/3fb4a8c2-6fc9-4a90-a0ca-3e362622e169)
 >
 ><img width="498" alt="스크린샷 2024-08-26 오후 4 58 58" src="https://github.com/user-attachments/assets/50bb8783-7850-4c0e-ac3f-14edbe3d6570">
 > 
-> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름 암호를 입력한다.
+> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름을 입력하고 암호를 자유롭게 입력한다.
 >
 ><img width="729" alt="스크린샷 2024-08-26 오후 4 04 32" src="https://github.com/user-attachments/assets/a9e100dd-4b43-4e23-9a6e-b678b300ad49">
 > 
@@ -74,13 +71,13 @@
 > 
 > 오른쪽 상단의 Fork버튼을 눌러 Copy the main branch only 항목을 선택 취소한 후, Create fork 버튼을 눌러 fork를 한다.
 > 
-> fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https://github.com/dongchandev/hg-BadExpectations.git을 복사한다.
+> fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https 칸을 클릭하여 https://github.com/dongchandev/hg-BadExpectations.git을 복사한다.
 > 
-> 컴퓨터에 임의의 폴더 하나를 만들고, 터미널을 접속하여 앞서 만든 폴더로 경로를 변경하고 git init을 입력한다. 그 후, 복사한 https://github.com/dongchandev/hg-BadExpectations.git를 통해 git remote add origin https://github.com/dongchandev/hg-BadExpectations.git을 적어 원격 브랜치와 연결한다.
+> 컴퓨터에 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 앞서 만든 폴더를 윈도우의 경우 shift + 우클릭하여 경로를 복사하고 맥의 경우 우클릭을 통해 정보보기를 클릭하여 경로를 복사하고 cd + / 를 한 후 cd + 복사한 경로를 입력해 git init을 입력한다. 그 후, 복사한 https://github.com/dongchandev/hg-BadExpectations.git를 통해 git remote add origin https://github.com/dongchandev/hg-BadExpectations.git을 적어 원격 브랜치와 연결한다.
 > 
 > git pull origin backend,git checkout backend 를 차례대로 입력한다.
 > 
-> 도커 실행하기
+> 도커 데스크탑을 실행하여 도커 실행하기
 > 
 > curl -fsSL https://aka.ms/install-azd.sh | bash, azd auth login을 차례대로 입력한다.
 > 
@@ -91,7 +88,8 @@
 > azd pipeline config 를 입력하고 첫번째 선택지에서 n을 선택합니다
 > 
 > gh auth login을 입력하여 깃허브 로그인을 진행하고 다시 커맨드 창으로 돌아와서
-```gh secret set DB_PASSWORD --body "<DB_PASSWORD>"
+```
+gh secret set DB_PASSWORD --body "<DB_PASSWORD>"
 gh secret set DB_URL --body "<DB_URL>"
 gh secret set DB_USERNAME --body "<DB_USERNAME>"
 gh secret set DOCKER_PASSWORD --body "<DOCKER_PASSWORD>"
@@ -101,24 +99,3 @@ gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 >해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
 > 
 > 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
-
->
-><hr/>
-> **배포 하는방법!!**
-
-<img width="1469" alt="스크린샷 2024-08-26 오후 10 55 05" src="https://github.com/user-attachments/assets/057ef0e8-3e6e-4a92-8161-0bba631ad6c5">
-여기 위에 희색으로 표시된 Actions 클릭 
-
-<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/adfe5ef8-23a0-4bbf-b51c-a05fdb1d028c">
-이 힌색부분을 누르고
-
-<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/54fec6fe-bfb7-4f55-acdc-f6b1fda54912">
-여기 왼쪽의 Deploy to Azure Container Apps를 클릭하시고
-<img width="1470" alt="스크린샷 2024-08-26 오후 11 00 45" src="https://github.com/user-attachments/assets/657d829e-de7b-4efd-9fb7-a19443ee007b">
-오른쪽의 Run workflow클릭 후 Branch가 main인지 확인 후 초록버튼인 Run workflow를 클릭합니다
-
-<img width="1470" alt="스크린샷 2024-08-26 오후 11 01 28" src="https://github.com/user-attachments/assets/f0b295f8-475e-4f32-b04b-21f9e3249b3c">
-그후 페이지를 새로고침을 하면 액션하나가 작동합니다
-기다리시다 초록불이 뜨면 액션으로 배포까지 성공했습니다 
-
-축하드립니다
