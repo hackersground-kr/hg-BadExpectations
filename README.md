@@ -38,15 +38,13 @@
 > 
 > **자바 jdk-17**
 >
-> windows : https://yungenie.tistory.com/11
+> 설치 사이트 : https://www.oracle.com/java/technologies/downloads/#jdk17-windows
 > 
-> x64 Installer	사용
-> 
-> mac : https://vkein.tistory.com/entry/Java-17-%EC%84%A4%EC%B9%98Mac
+> windows : x64 Installer	사용
 >
-> apple chip : ARM64 DMG Installer 사용
+> mac(apple chip) : ARM64 DMG Installer 사용
 > 
-> intel chip : x64 DMG Installer 사용
+> mac(intel chip) : x64 DMG Installer 사용
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
