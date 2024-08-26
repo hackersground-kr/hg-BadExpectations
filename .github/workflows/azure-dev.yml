@@ -62,7 +62,7 @@ jobs:
             --tenant-id "$AZURE_TENANT_ID"
 
       - name: Log in with Azure (Client Credentials)
-        if: ${{ secrets.AZURE_CREDENTIALS }}
+        if: ${{ env.AZURE_CREDENTIALS }}
         run: |
           $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable
           Write-Host "::add-mask::$($info.clientSecret)"
@@ -73,7 +73,7 @@ jobs:
             --tenant-id "$($info.tenantId)"
         shell: pwsh
         env:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+          AZURE_CREDENTIALS: ${{ env.AZURE_CREDENTIALS }}
 
       - name: Provision Infrastructure
         run: azd provision --no-prompt
