@@ -19,6 +19,8 @@ jobs:
       AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      AZURE_ENV_NAME: ${{ secrets.AZURE_ENV_NAME }}  # 환경 이름을 설정
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -49,7 +51,7 @@ jobs:
 
       - name: Docker build
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker build -t ${{ secrets.DOCKER_USERNAME }}/uiseong-come-on .
           docker push ${{ secrets.DOCKER_USERNAME }}/uiseong-come-on:latest
 
@@ -57,24 +59,30 @@ jobs:
         uses: Azure/setup-azd@v1.0.0
 
       - name: Log in with Azure (Federated Credentials)
-        if: ${{ env.AZURE_CLIENT_ID != '' }}
+        if: ${{ env.AZURE_CLIENT_ID }}
         run: |
-          azd auth login 
-            --client-id "$Env:AZURE_CLIENT_ID" 
-            --federated-credential-provider "github" 
-            --tenant-id "$Env:AZURE_TENANT_ID"
+          azd auth login `
+            --client-id "${{ env.AZURE_CLIENT_ID }}" `
+            --federated-credential-provider "github" `
+            --tenant-id "${{ env.AZURE_TENANT_ID }}"
         shell: pwsh
 
       - name: Log in with Azure (Client Credentials)
-        if: ${{ env.AZURE_CREDENTIALS != '' }}
+        if: ${{ secrets.AZURE_CREDENTIALS }}
         run: |
-          $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable;
+          $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable
           Write-Host "::add-mask::$($info.clientSecret)"
-
-          azd auth login 
-            --client-id "$($info.clientId)" 
-            --client-secret "$($info.clientSecret)" 
+          
+          azd auth login `
+            --client-id "$($info.clientId)" `
+            --client-secret "$($info.clientSecret)" `
             --tenant-id "$($info.tenantId)"
         shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Provision Infrastructure
+        run: azd provision --environment ${{ env.AZURE_ENV_NAME }} --no-prompt
+
+      - name: Deploy Application
+        run: azd deploy --environment ${{ env.AZURE_ENV_NAME }} --no-prompt
