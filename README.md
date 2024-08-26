@@ -94,6 +94,21 @@ gh secret set DB_URL --body "<DB_URL>"
 gh secret set DB_USERNAME --body "<DB_USERNAME>"
 gh secret set DOCKER_PASSWORD --body "<DOCKER_PASSWORD>"
 gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
+>
+><hr/>
+> **배포 하는방법!!**
+<img width="1469" alt="스크린샷 2024-08-26 오후 10 55 05" src="https://github.com/user-attachments/assets/057ef0e8-3e6e-4a92-8161-0bba631ad6c5">
+여기 위에 희색으로 표시된 Actions 클릭 
+<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/adfe5ef8-23a0-4bbf-b51c-a05fdb1d028c">
+이 힌색부분을 누르고
+<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/54fec6fe-bfb7-4f55-acdc-f6b1fda54912">
+여기 왼쪽의 Deploy to Azure Container Apps를 클릭하시고
+<img width="1470" alt="스크린샷 2024-08-26 오후 11 00 45" src="https://github.com/user-attachments/assets/657d829e-de7b-4efd-9fb7-a19443ee007b">
+오른쪽의 Run workflow클릭 후 Branch가 main인지 확인 후 초록버튼인 Run workflow를 클릭합니다
+<img width="1470" alt="스크린샷 2024-08-26 오후 11 01 28" src="https://github.com/user-attachments/assets/f0b295f8-475e-4f32-b04b-21f9e3249b3c">
+그후 페이지를 새로고침을 하면 액션하나가 작동합니다
+기다리시다 초록불이 뜨면 액션으로 배포까지 성공했습니다 
+축하드립니다
 ```
 >
 >해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
