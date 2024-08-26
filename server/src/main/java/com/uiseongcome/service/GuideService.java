@@ -1,17 +1,11 @@
 package com.uiseongcome.service;
 
-import com.uiseongcome.domain.File;
-import com.uiseongcome.domain.GuideInfo;
-import com.uiseongcome.domain.Place;
-import com.uiseongcome.domain.User;
+import com.uiseongcome.domain.*;
 import com.uiseongcome.dto.GuideDto;
 import com.uiseongcome.dto.GuideListRes;
 import com.uiseongcome.dto.GuideWithIdRes;
 import com.uiseongcome.dto.PlaceDto;
-import com.uiseongcome.repository.FileRepository;
-import com.uiseongcome.repository.GuideInfoRepository;
-import com.uiseongcome.repository.PlaceRepository;
-import com.uiseongcome.repository.UserRepository;
+import com.uiseongcome.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +19,7 @@ public class GuideService {
     private final UserRepository userRepository;
     private final PlaceRepository placeRepository;
     private final FileRepository fileRepository;
+    private final ApplicantRepository applicantRepository;
 
     @Transactional(rollbackFor = Exception.class)
     public void append(GuideDto guideDto){
@@ -52,5 +47,21 @@ public class GuideService {
         List<Place> places = placeRepository.findByGuideInfo(guideInfo);
         List<File> files = fileRepository.findByGuideInfo(guideInfo);
         return GuideWithIdRes.of(guideInfo, places, files);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void apply(Long id, String userId){
+        GuideInfo guide = guideInfoRepository.findById(id).get();
+        User user = userRepository.findById(userId).get();
+        applicantRepository.save(Applicant.builder()
+                .guideInfo(guide)
+                .user(user)
+                .build());
+    }
+
+    @Transactional(readOnly = true)
+    public List<User> getApplicant(Long guideId){
+        GuideInfo guide = guideInfoRepository.findById(guideId).get();
+        return applicantRepository.findByGuideInfo(guide).stream().map(Applicant::getUser).toList();
     }
 }

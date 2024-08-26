@@ -1,5 +1,6 @@
 package com.uiseongcome.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
@@ -14,6 +15,7 @@ public class User {
     @Id
     private String userId;
 
+    @JsonIgnore
     private String pw;
 
     private String name;
