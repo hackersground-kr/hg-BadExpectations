@@ -26,7 +26,20 @@
 > **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다. 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
 
 ### 사전 준비 사항
-> 도커 데스크탑, 도커 엔진, Azure 계정, 깃허브 계정, 자바 jdk-17
+> **docker desktop 설치**
+> 
+> mac : https://docs.docker.com/desktop/install/mac-install/
+> windows : https://docs.docker.com/desktop/install/windows-install/
+>
+> **깃허브 회원가입**
+>
+> https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
+>
+> 
+> **자바 jdk-17**
+>
+> windows : https://yungenie.tistory.com/11
+> mac : https://vkein.tistory.com/entry/Java-17-%EC%84%A4%EC%B9%98Mac
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
