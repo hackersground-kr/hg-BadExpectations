@@ -43,7 +43,7 @@ To describe the infrastructure and application, `azure.yaml` along with Infrastr
 
 Each bicep file declares resources to be provisioned. The resources are provisioned when running `azd up` or `azd provision`.
 
-- [app/hackerground.bicep](./infra/app/hackerground.bicep) - Azure Container Apps resources to host the 'hackerground' service.
+- [app/web.bicep](./infra/app/web.bicep) - Azure Container Apps resources to host the 'web' service.
 - [shared/keyvault.bicep](./infra/shared/keyvault.bicep) - Azure KeyVault to store secrets.
 - [shared/monitoring.bicep](./infra/shared/monitoring.bicep) - Azure Log Analytics workspace and Application Insights to log and store instrumentation logs.
 - [shared/registry.bicep](./infra/shared/registry.bicep) - Azure Container Registry to store docker images.
