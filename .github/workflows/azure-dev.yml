@@ -70,3 +70,13 @@ jobs:
 
       - name: Deploy Application
         run: azd deploy --no-prompt
+
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+
+      - name: Run Docker Compose
+        run: |
+          docker-compose up -d
+        working-directory: ./docker-compose.yml
