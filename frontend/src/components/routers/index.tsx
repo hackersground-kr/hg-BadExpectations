@@ -8,7 +8,7 @@ import Login from "../auth/login/index";
 import Name from "../auth/name";
 import Number from "../auth/number/index";
 import Default from "../auth/default";
-
+import Profile from "../profile/index";
 import Home from "../../page/home";
 
 const Router=()=>{
@@ -25,6 +25,7 @@ const Router=()=>{
                 <Route path="/sign/number" element={<Number/>}/>
                 <Route path = "hostmain" element = {<HostHome/>}/>
                 <Route path="/home" element={<Home />}/>
+                <Route path="/profile" element={<Profile />}/>
             </Routes>
         </BrowserRouter>
     )

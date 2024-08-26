@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <>
             {
-                (location.pathname !== "/sign" && location.pathname !=="/sign/name" && location.pathname !=="/sign/number" && location.pathname !== "/signup" && location.pathname !== "/sing/name" && location.pathname !== "/sing/consumer" && !location.pathname.includes("host")) &&  location.pathname !== "/login" && location.pathname !== "/sign/guide"&& location.pathname !== "/sign/consumer" && <div style={{
+                (location.pathname !== "/sign" && location.pathname !=="/sign/name" && location.pathname !=="/sign/number" && location.pathname !== "/signup" && location.pathname !== "/sing/name" && !location.pathname.includes("host")) &&  location.pathname !== "/login" && location.pathname !== "/profile"  && <div style={{
                     display: "flex",
                     width: 393,
                     height: 124,
