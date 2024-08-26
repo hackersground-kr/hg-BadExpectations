@@ -139,7 +139,7 @@
 > 
 > 도커 데스크탑을 실행하여 도커 실행하기
 > 
-> curl -fsSL https://aka.ms/install-azd.sh | bash, azd auth login 을 차례대로 입력한다.
+> 터미널(또는 cmd) curl -fsSL https://aka.ms/install-azd.sh | bash, azd auth login 을 차례대로 입력한다.
 > 
 > azd init -e BadExpectations를 입력한 후, Use code in the current directory를 선택하고 그 다음 Confirm and continue initializing my app를 선택합니다
 > 
