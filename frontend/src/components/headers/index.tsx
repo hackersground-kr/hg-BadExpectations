@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <>
             {
-                (location.pathname !== "/sign" && location.pathname !=="/sign/name" && location.pathname !=="/sign/number" && location.pathname !== "/signup" && location.pathname !== "/sing/name" && !location.pathname.includes("host")) &&  location.pathname !== "/login" && location.pathname !== "/profile"  && <div style={{
+                (!location.pathname.includes("sign") && !location.pathname.includes("host")) &&  location.pathname !== "/login" && location.pathname !== "/search/question" && location.pathname !== "/profile" && <div style={{
                     display: "flex",
                     width: 393,
                     height: 124,

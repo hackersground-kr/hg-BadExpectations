@@ -12,6 +12,8 @@ import Number from "../auth/number/index";
 import Default from "../auth/default";
 import Profile from "../profile/index";
 import Home from "../../page/home";
+import Search from "../../page/search";
+import SearchQuestion from "../../page/search/question";
 
 const Router=()=>{
     return(
@@ -26,10 +28,11 @@ const Router=()=>{
                 <Route path="/signup" element={<Default/>}/> 
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/sign/name" element={<Name/>}/>
-                <Route path="/sign/number" element={<Number/>}/>
                 <Route path = "hostmain" element = {<HostHome/>}/>
                 <Route path="/home" element={<Home />}/>
                 <Route path="/profile" element={<Profile />}/>
+                <Route path="/search" element={<Search />}/>
+                <Route path="/search/question" element={<SearchQuestion />}/>
             </Routes>
         </BrowserRouter>
     )

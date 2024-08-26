@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
-    width: 82%;
     height: 37px;
     border-radius: 100px;
     border-width: 1.5px;
