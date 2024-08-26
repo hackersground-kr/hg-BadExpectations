@@ -45,8 +45,11 @@ const Home = () => {
 
         let map = new window.kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
 
-        markAdd(36.42, 128.6, true, map);
-        markAdd(36.5, 128.3, true, map);
+        markAdd(36.42, 128.62, true, map);
+        markAdd(36.52, 128.59, true, map);
+        markAdd(36.49, 128.52, true, map);
+        markAdd(36.50, 128.45, true, map);
+        markAdd(36.45, 128.39, true, map);
     }, []);
 
     return (

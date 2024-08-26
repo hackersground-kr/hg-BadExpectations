@@ -8,7 +8,7 @@ import { authType } from "../../../store/authtype/authtype.atom";
 import { useNavigate } from "react-router-dom";
 
 
-const Number = ()=>{
+const Number = (s: string)=>{
     const navigate = useNavigate();
     const [AuthValid, setAuthValid] = useAtom(authType);
     const consumerAuth = ()=>{
