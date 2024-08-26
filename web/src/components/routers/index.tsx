@@ -16,11 +16,11 @@ import SearchQuestion from "../../page/search/question";
 
 const Router=()=>{
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>;
             <Header/>
             <HostHeader/>
             <Routes>
-                <Route path="/sign" element={<Auth />}/>
+                <Route path="/sign/" element={<Auth />}/>
                 <Route path = "/hosthome" element = {<HostHome/>}/>
                 <Route path = "/hostmake" element = {<HostMake/>}/>
                 <Route path="/signup" element={<Default/>}/> 
