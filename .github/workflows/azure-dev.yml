@@ -79,10 +79,9 @@ jobs:
         shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Provision Infrastructure
-        run: azd provision --no-prompt
-        env:
-          AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
+        run: azd provision --environment ${{ env.AZURE_ENV_NAME }} --no-prompt
 
       - name: Deploy Application
-        run: azd deploy --no-prompt
+        run: azd deploy --environment ${{ env.AZURE_ENV_NAME }} --no-prompt
