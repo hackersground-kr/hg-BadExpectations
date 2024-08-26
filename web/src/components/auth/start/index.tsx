@@ -8,9 +8,6 @@ import { authType } from "../../../store/authtype/authtype.atom";
 import onBoding from "../../../assets/onBoding.svg";
 import mouth from "../../../assets/mouth.svg";
 
-
-
-
 const Auth = ()=>{
     const navigate = useNavigate();
     const [onBoarding, setOnBoarding] = useState(true);
@@ -18,7 +15,7 @@ const Auth = ()=>{
     if(onBoarding){
         setTimeout(function(){
             setOnBoarding(false);
-        }, 3000);
+        }, 2000);
 
     }
 
