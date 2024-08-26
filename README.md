@@ -31,6 +31,8 @@
 > mac : https://docs.docker.com/desktop/install/mac-install/
 > 
 > windows : https://docs.docker.com/desktop/install/windows-install/
+> 대부분의 경우에 x86_64 사용하나 안될 경우 Arm 버전 사용
+> 
 >
 > **깃허브 회원가입**
 >
