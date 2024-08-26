@@ -118,6 +118,9 @@ export const AddButton = styled.button`
   width: 100%;
   height: 50px;
   border-radius: 13px;
+  font-size: 17px;
+font-style: normal;
+font-weight: 800;
 `;
 
 export const PlusIconImg = styled.div`

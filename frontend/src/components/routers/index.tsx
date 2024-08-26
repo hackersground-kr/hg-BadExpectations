@@ -3,6 +3,7 @@ import { BrowserRouter, Route , Routes } from "react-router-dom";
 import HostHome from "../../page/host-home/index";
 import HostHeader from "../headers/host-header/index"
 import HostMake from "../../page/host-make/index";
+import HostBook from "../../page/host-book/index";
 import Header from "../headers";
 import Auth from "../auth/start";
 import Login from "../auth/login/index";
@@ -21,6 +22,7 @@ const Router=()=>{
                 <Route path="/sign" element={<Auth />}/>
                 <Route path = "/hosthome" element = {<HostHome/>}/>
                 <Route path = "/hostmake" element = {<HostMake/>}/>
+                <Route path = "/hostbook" element = {<HostBook/>}/>
                 <Route path="/signup" element={<Default/>}/> 
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/sign/name" element={<Name/>}/>

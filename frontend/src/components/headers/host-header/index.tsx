@@ -25,9 +25,9 @@ const HostHeader = () => {
                     justifyContent: 'flex-end',
                 }}>
                     <div style={{display: "flex", flexDirection: "column", width: 304, height: 78}}>
-                        <div style={{display: "flex", flexDirection: "row", width: 98, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
+                        <div style={{display: "flex", flexDirection: "row", width: 130, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
                             <img src={headerLogo} alt="Logo" style={{width: 26, height: 28, marginLeft: 5}}/>
-                            <span style={{fontSize: 16, fontWeight: '800', color: "#FFA800"}}>의성올래</span>
+                            <span style={{fontSize: 16, fontWeight: '800', color: "#FFA800"}}>의성올래 공방</span>
                         </div>
                         <div style={{width: 1, height: 25}}></div>
                         <div style={{
