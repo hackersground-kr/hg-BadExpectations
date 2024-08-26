@@ -19,7 +19,7 @@ jobs:
       AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-      AZURE_ENV_NAME: ${{ secrets.AZURE_ENV_NAME }}
+      AZURE_ENV_NAME: ${{ secrets.AZURE_ENV_NAME }} # 환경 이름 설정
 
     steps:
       - name: Checkout
