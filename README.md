@@ -75,7 +75,7 @@
 > 
 > fork한 레포지토리로 이동하여 초록색 < >code 버튼을 클릭한다. 그 후, https 칸을 클릭하여 https://github.com/dongchandev/hg-BadExpectations.git 을 복사한다.
 > 
-> 컴퓨터에 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 앞서 만든 폴더를 윈도우의 경우 shift + 우클릭하여 경로를 복사하고 맥의 경우 우클릭을 통해 정보보기를 클릭하여 경로를 복사하고 cd + / 를 한 후 cd + 복사한 경로를 입력해 git init을 입력한다. 그 후, 복사한 https://github.com/dongchandev/hg-BadExpectations.git를 통해 git remote add origin https://github.com/dongchandev/hg-BadExpectations.git을 적어 원격 브랜치와 연결한다.
+> 컴퓨터에 임의의 폴더 하나를 만들고, 윈도우의 경우 하단의 돋보기 모양 아이콘을 클릭하여 cmd를 치고 맥의 경우 command+space를 동시에 눌러 터미널을 검색해 작업터미널을 접속하여 앞서 만든 폴더를 윈도우의 경우 shift + 우클릭하여 경로를 복사하고 맥의 경우 우클릭을 통해 정보보기를 클릭하여 경로를 복사하고 cd + / 를 한 후 cd + 복사한 경로를 입력해 git init을 입력한다. 그 후, 복사한 https://github.com/dongchandev/hg-BadExpectations.git 를 통해 git remote add origin https://github.com/dongchandev/hg-BadExpectations.git 을 적어 원격 브랜치와 연결한다.
 > 
 > git pull origin backend,git checkout backend 를 차례대로 입력한다.
 > 
