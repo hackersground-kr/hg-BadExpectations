@@ -1,6 +1,5 @@
 package com.uiseongcome.dto;
 
-import com.uiseongcome.domain.File;
 import com.uiseongcome.domain.GuideInfo;
 import com.uiseongcome.domain.GuideKind;
 import com.uiseongcome.domain.User;
