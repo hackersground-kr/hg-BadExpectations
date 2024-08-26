@@ -112,6 +112,8 @@ gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 <img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/adfe5ef8-23a0-4bbf-b51c-a05fdb1d028c">
 이 힌색부분을 누르고
 
+<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/54fec6fe-bfb7-4f55-acdc-f6b1fda54912">
+여기 왼쪽의 Deploy to Azure Container Apps를 클릭하시고
 <img width="1470" alt="스크린샷 2024-08-26 오후 11 00 45" src="https://github.com/user-attachments/assets/657d829e-de7b-4efd-9fb7-a19443ee007b">
 오른쪽의 Run workflow클릭 후 Branch가 main인지 확인 후 초록버튼인 Run workflow를 클릭합니다
 
