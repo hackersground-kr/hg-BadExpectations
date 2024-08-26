@@ -101,31 +101,22 @@ gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 >해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
 > 
 > 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
+
 >
 ><hr/>
-> **웹 배포**
-> 로그인 한 에저에서 검색창에 'marketplace'검색. 
-> <img width="1470" alt="Screenshot 2024-08-26 at 19 33 31" src="https://github.com/user-attachments/assets/d1f85523-92f4-4c51-bf12-fc5591e1efbd">
+> **배포 하는방법!!**
 
-마켓 플레이스에서 'Azure 서비스만' 선택 후 web app 검색하기 
-<img width="1470" alt="Screenshot 2024-08-26 at 19 34 04" src="https://github.com/user-attachments/assets/36d58e15-31c6-4673-8448-e21ccebd624b">
+<img width="1469" alt="스크린샷 2024-08-26 오후 10 55 05" src="https://github.com/user-attachments/assets/057ef0e8-3e6e-4a92-8161-0bba631ad6c5">
+여기 위에 희색으로 표시된 Actions 클릭 
 
-<img width="1470" alt="Screenshot 2024-08-26 at 19 34 48" src="https://github.com/user-attachments/assets/04570118-e45c-49ef-abc7-41cea74095e0">
-만들기 선택
+<img width="1470" alt="스크린샷 2024-08-26 오후 10 58 16" src="https://github.com/user-attachments/assets/adfe5ef8-23a0-4bbf-b51c-a05fdb1d028c">
+이 힌색부분을 누르고
 
-<img width="1470" alt="Screenshot 2024-08-26 at 19 35 14" src="https://github.com/user-attachments/assets/29bf32d7-987c-4b0c-bc35-8af65d7e28d2">
-자신의 팀 이름 레파지토리 검색 ex)rg-BadExpectations
+<img width="1470" alt="스크린샷 2024-08-26 오후 11 00 45" src="https://github.com/user-attachments/assets/657d829e-de7b-4efd-9fb7-a19443ee007b">
+오른쪽의 Run workflow클릭 후 Branch가 main인지 확인 후 초록버튼인 Run workflow를 클릭합니다
 
-<img width="1470" alt="Screenshot 2024-08-26 at 19 36 03" src="https://github.com/user-attachments/assets/4a310052-4242-49b2-8bc6-9cd557f5af8e">
-자신의 브랜치 선택하기 
+<img width="1470" alt="스크린샷 2024-08-26 오후 11 01 28" src="https://github.com/user-attachments/assets/f0b295f8-475e-4f32-b04b-21f9e3249b3c">
+그후 페이지를 새로고침을 하면 액션하나가 작동합니다
+기다리시다 초록불이 뜨면 액션으로 배포까지 성공했습니다 
 
-<img width="1470" alt="Screenshot 2024-08-26 at 19 36 24" src="https://github.com/user-attachments/assets/45f35bdb-fd66-4c64-ba69-9fb7407647a8">
-빌드 세부 정보를 React로 변경
-
-<img width="1470" alt="Screenshot 2024-08-26 at 19 36 46" src="https://github.com/user-attachments/assets/6b8a3eb4-ecb2-4dec-abce-48c49ae4766b">
-East Asia 기본 설정 유지
-
-<img width="1470" alt="Screenshot 2024-08-26 at 19 37 21" src="https://github.com/user-attachments/assets/e7618df7-1aa3-4277-9089-a9b67b17595a">
-자신이 기억할 수 있는 쉬운 단어로 정리
-
-<img width="1470" alt="Screenshot 2024-08-26 at 19 38 25" src="https://github.com/user-attachments/assets/c6b34590-626d-4656-bf2c-e88301baa672">
+축하드립니다
