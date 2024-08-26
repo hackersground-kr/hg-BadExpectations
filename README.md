@@ -44,8 +44,16 @@
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
 >
-> <img width="729" alt="스크린샷 2024-08-26 오후 4 04 32" src="https://github.com/user-attachments/assets/a9e100dd-4b43-4e23-9a6e-b678b300ad49">
-> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름 암호를 입력하고 네트워킹에서 방화벽 설정을 0.0.0.0~255.255.255.255로 설정한다. 그 후, 검토 및 만들기를 통해 DB를 만든다.
+><img width="498" alt="스크린샷 2024-08-26 오후 4 58 58" src="https://github.com/user-attachments/assets/50bb8783-7850-4c0e-ac3f-14edbe3d6570">
+> 
+> 그 후, 리소스 그룹과 서버이름을 입력하고 관리자 이름 암호를 입력한다.
+>
+><img width="729" alt="스크린샷 2024-08-26 오후 4 04 32" src="https://github.com/user-attachments/assets/a9e100dd-4b43-4e23-9a6e-b678b300ad49">
+> 
+>
+> 네트워킹에서 방화벽 설정을 0.0.0.0~255.255.255.255로 설정한다. 
+> 
+> 그 후, 검토 및 만들기를 통해 DB를 만든다.
 > 
 > github에서 hackersground-kr organization의 hg-BadExpectations 레포지토리를 클릭한다.
 > 
@@ -68,11 +76,13 @@
 > azd pipeline config 를 입력하고 첫번째 선택지에서 n을 선택합니다
 > 
 > gh auth login을 입력하여 깃허브 로그인을 진행하고 다시 커맨드 창으로 돌아와서
-gh secret set DB_PASSWORD --body "<DB_PASSWORD>"
+```gh secret set DB_PASSWORD --body "<DB_PASSWORD>"
 gh secret set DB_URL --body "<DB_URL>"
 gh secret set DB_USERNAME --body "<DB_USERNAME>"
 gh secret set DOCKER_PASSWORD --body "<DOCKER_PASSWORD>"
 gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
-해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
+```
+>
+>해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
 > 
 > 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
