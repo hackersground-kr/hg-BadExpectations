@@ -1,4 +1,4 @@
-# 나쁜기대치 - 의성올래
+<img width="1468" alt="스크린샷 2024-08-27 오전 2 00 50" src="https://github.com/user-attachments/assets/f61db6d2-6b2f-46d1-939f-dce0f3eb659f"><img width="719" alt="스크린샷 2024-08-27 오전 1 55 55" src="https://github.com/user-attachments/assets/57e1c3f3-1ed8-430e-8988-e6614af819f2"># 나쁜기대치 - 의성올래
 
 해커그라운드 해커톤에 참여하는 나쁜기대치 팀의 의성올래입니다.
 
@@ -38,29 +38,63 @@
 > 
 > **docker desktop 설치**
 > 
-> mac : https://docs.docker.com/desktop/install/mac-install/
 > 
+> mac : https://docs.docker.com/desktop/install/mac-install/
+>
+> <img width="1470" alt="스크린샷 2024-08-27 오전 1 44 39" src="https://github.com/user-attachments/assets/ef24c02d-73bd-4994-a286-9779f505e95c">
+>
 > 인텔칩을 사용중이라면 인텔칩 도커 사용(대부분 인텔 스티커가 붙어 있음)
 > 그가 아니라면 애플 실리콘칩 도커 사용
 > 
+><img width="1469" alt="스크린샷 2024-08-27 오전 1 47 49" src="https://github.com/user-attachments/assets/9db969e2-b0fd-4cff-b6b3-936860010a1b">
+>
 > windows : https://docs.docker.com/desktop/install/windows-install/
 > 대부분의 경우에 x86_64 사용하나 안될 경우 Arm 버전 사용
 > 
 >
 > **깃허브 회원가입**
->
 > https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
->
 > 
+><img width="1470" alt="스크린샷 2024-08-27 오전 1 51 15" src="https://github.com/user-attachments/assets/4d75ba44-c32b-421f-add5-070bfbe4d076">
+>
+>빨간 박스로 회원가입을 합니다
+>
+><img width="1345" alt="스크린샷 2024-08-27 오전 1 52 35" src="https://github.com/user-attachments/assets/adbe391e-5a66-4727-a467-3591f1a29cca">
+>이곳에 자신의 이메일을 작성 
+><img width="1470" alt="스크린샷 2024-08-27 오전 1 54 50" src="https://github.com/user-attachments/assets/f464a847-4087-4f74-a7bf-8fcf77aefb5f">
+>그후 질문에 대한 답들을 적어주면 됩니다
+>마지막 동의 까지 하고 초록 버튼 클릭
+>
+> <img width="1345" alt="스크린샷 2024-08-27 오전 1 52 35 2" src="https://github.com/user-attachments/assets/17ad2d2b-0c91-448b-9a7c-fdea9c2d64b1">
+>이메일로 받은 코드를 이곳에다가 작성합니다
+>
+> <img width="738" alt="스크린샷 2024-08-27 오전 1 56 52" src="https://github.com/user-attachments/assets/6aaa7492-689a-40ec-afbf-a66c3fcf2e23">
+> 코드 인증 성공시 깃허브를 어떤식으로 사용할지 작성하는 칸이 있는데 자신이 사용할 목적을 선택하면 됩니다
+>
+> <img width="733" alt="스크린샷 2024-08-27 오전 1 58 10" src="https://github.com/user-attachments/assets/5d832eec-4177-41d0-802d-d42a9b97107f">
+>그후 어떤 조직도를 사용할것인지 물어보는데 우리는 회사가 아니기때문에 그저 free로 선택합니다
+>그러면 회원가입 성공입니다 
+>
 > **자바 jdk-17**
+>
+><img width="1470" alt="스크린샷 2024-08-27 오전 2 01 14" src="https://github.com/user-attachments/assets/05491707-ff12-4330-8462-a3d4b9d34916">
+>
+>들어오면 이렇게 뜨는데 빨간색박스에 있는 jdk17을 다운로드 하면됩니다
 >
 > 설치 사이트 : https://www.oracle.com/java/technologies/downloads/#jdk17-windows
 > 
-> windows : x64 Installer	사용
->
-> mac(apple chip) : ARM64 DMG Installer 사용
 > 
-> mac(intel chip) : x64 DMG Installer 사용
+>그중 windows는 x64 Installer	를 사용
+><img width="1381" alt="스크린샷 2024-08-27 오전 2 02 22" src="https://github.com/user-attachments/assets/1ec656c2-9041-47bb-a845-f97983b00100">
+>
+> mac(apple chip)은 ARM64 DMG Installer 사용
+>
+><img width="1256" alt="스크린샷 2024-08-27 오전 2 02 55" src="https://github.com/user-attachments/assets/82195c6c-bd5d-48d1-ac77-a6b05156db1c">
+> 
+> 또다른 mac(intel chip)인텔칩을 사용하는 맥북 x64 DMG Installer 사용
+>
+><img width="1467" alt="스크린샷 2024-08-27 오전 2 04 10" src="https://github.com/user-attachments/assets/3b4948eb-0884-4bd5-8c44-4f5e832de4ee">
+
 
 ## 시작하기
 > https://portal.azure.com/ 에 접속해 로그인을 진행하고 왼쪽 상단의 리소스 만들기 버튼을 클릭해 Azure Database for MySQL를 검색하여 누르고 만들기를 클릭한 후 유연한 서버를 만드는 것을 선택한다.
