@@ -143,7 +143,7 @@
 > 
 > azd init -e BadExpectations를 입력한 후, Use code in the current directory를 선택하고 그 다음 Confirm and continue initializing my app를 선택합니다
 > 
-> 그 후,  azd up를 입력하고 git add . , git commit -m "init" , git push origin backend 를 차례대로 입력합니다
+> 그 후,  azd up를 입력하고 git add . , git commit -m "init" , git push origin main 를 차례대로 입력합니다
 > 
 > azd pipeline config 를 입력하고 첫번째 선택지에서 n을 선택합니다
 > 
