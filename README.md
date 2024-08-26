@@ -96,8 +96,11 @@ gh secret set DOCKER_PASSWORD --body "<DOCKER_PASSWORD>"
 gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 >
 ```
+>해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
+> 
+> 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
 ><hr/>
-> **배포 하는방법!!**
+> ** 상세한 배포 방법!!**
 >
 > <img width="1469" alt="스크린샷 2024-08-26 오후 10 55 05" src="https://github.com/user-attachments/assets/057ef0e8-3e6e-4a92-8161-0bba631ad6c5">
 >
@@ -121,6 +124,4 @@ gh secret set DOCKER_USERNAME --body "<DOCKER_USERNAME>"
 > 기다리시다 초록불이 뜨면 액션으로 배포까지 성공했습니다 
 > 축하드립니다
 >
->해당 명령어를 입력합니다 이 떄 <>안의 값은 실제값으로 대체합니다. DB_PASSWORD와 DB_USERNAME가장 앞부분 db를 만들 때 설정했었고, DB_URL은 https://portal.azure.com 에서 만든 DB를 찾으면 기술되어 있습니다.
-> 
-> 그 후, https://github.com/사용자 이름/hg-BadExpectations 으로 접속하여 Actions 페이지로 이동해 가장 최근 git action을 들어가 Re-run all jobs 버튼을 누릅니다.
+
