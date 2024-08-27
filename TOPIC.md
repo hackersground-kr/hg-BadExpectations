@@ -60,4 +60,4 @@ https://github.com/hackersground-kr/hg-BadExpectations/blob/main/decks/%E1%84%82
 
 ## 제품 소개 동영상
 
-https://www.youtube.com/@user-fe6ft9dz5b/videos
+[https://www.youtube.com/@user-fe6ft9dz5b/videos](https://youtu.be/hHE7ppH_F8A?si=ZxWGEQrQBgnmKyHx)
