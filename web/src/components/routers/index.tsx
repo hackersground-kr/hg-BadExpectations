@@ -13,7 +13,7 @@ import Profile from "../profile/index";
 import Home from "../../page/home";
 import Search from "../../page/search";
 import SearchQuestion from "../../page/search/question";
-import Subscription from "../../page/subscription";
+import Subscription from "../../page/subscription/index";
 
 const Router=()=>{
     return(
