@@ -60,4 +60,4 @@ https://github.com/hackersground-kr/hg-BadExpectations/blob/main/decks/%E1%84%82
 
 ## 제품 소개 동영상
 
-제품 또는 서비스를 소개하는 동영상을 YouTube와 같은 곳에 업로드하고 동영상 링크를 적어주세요.
+https://www.youtube.com/@user-fe6ft9dz5b/videos
