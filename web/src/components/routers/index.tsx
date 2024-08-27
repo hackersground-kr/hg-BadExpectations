@@ -17,21 +17,21 @@ import Subscription from "../../page/subscription";
 
 const Router=()=>{
     return(
-        <BrowserRouter basename={process.env.PUBLIC_URL}>;
+        <BrowserRouter >
             <Header/>
             <HostHeader/>
             <Routes>
-                <Route path="/sign/" element={<Auth />}/>
-                <Route path = "/hosthome/" element = {<HostHome/>}/>
-                <Route path = "/hostmake/" element = {<HostMake/>}/>
-                <Route path="/signup/" element={<Default/>}/> 
-                <Route path="/login/" element={<Login/>}/>
-                <Route path="/sign/name/" element={<Name/>}/>
-                <Route path="/sign/number/" element={<Number/>}/>
-                <Route path = "hostmain/" element = {<HostHome/>}/>
-                <Route path="/home/" element={<Home />}/>
-                <Route path="/profile/" element={<Profile />}/>
-                <Route path="/search/" element={<Search />}/>
+                <Route path="/sign" element={<Auth />}/>
+                <Route path = "/hosthome" element = {<HostHome/>}/>
+                <Route path = "/hostmake" element = {<HostMake/>}/>
+                <Route path="/signup" element={<Default/>}/> 
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/sign/name" element={<Name/>}/>
+                <Route path="/sign/number" element={<Number/>}/>
+                <Route path = "hostmain" element = {<HostHome/>}/>
+                <Route path="/home" element={<Home />}/>
+                <Route path="/profile" element={<Profile />}/>
+                <Route path="/search" element={<Search />}/>
                 <Route path="/search/question/" element={<SearchQuestion />}/>
                 <Route path="/subscribe/" element={<Subscription />}/>
             </Routes>
