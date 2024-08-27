@@ -2,11 +2,26 @@ import React, {useState} from 'react';
 import * as S from "./style";
 import headerLogo from "../../assets/headerLogo.svg";
 import userIcon from "../../assets/userIcon.svg";
-import {useLocation} from "react-router-dom";
 import LogoutModal from '../logoutmodal';
+import { useAtom } from "jotai";
+import { authType } from "../../store/authtype/authtype.atom";
+import { useNavigate } from "react-router-dom";
+import cancel from "../../assets/cancel.svg";
 
 const Profile =()=>{
+    const navigate = useNavigate();
     const [modal, setModal]=useState(false);
+    const [AuthValid, setAuthValid] = useAtom(authType);
+    const consumerAuth = ()=>{
+        setAuthValid((prev)=>!prev);
+      
+   
+    }
+    const name = localStorage.getItem("signupName")
+    const logout=()=>{
+        setModal(true)
+   
+    }
 return(
 <>
     <S.main>
@@ -20,9 +35,10 @@ return(
                     justifyContent: 'flex-end',
                 }}>
                     <div style={{display: "flex", flexDirection: "column", width: 304, height: 78}}>
-                        <div style={{display: "flex", flexDirection: "row", width: 98, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
+                        <div style={{display: "flex", flexDirection: "row", width: 280, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
                             <img src={headerLogo} alt="Logo" style={{width: 26, height: 28, marginLeft: 5}}/>
-                            <text style={{fontSize: 16, fontWeight: '800', color: "#FFA800"}}>의성올래</text>
+                            <text style={{fontSize: 16, fontWeight: '800', color: "#FFA800", marginRight:150}}>의성올래</text>
+                            <img onClick={()=>navigate("/home")} src={cancel} alt="cancel" style={{width: 18, height: 18, marginLeft:8, }} />
                         </div>
                         <div style={{width: 1, height: 25}}></div>
                         <div style={{
@@ -64,14 +80,14 @@ return(
                             <img src={userIcon} alt="img" />
                             <S.profileName>
                                 <div>
-                                <p>이해준</p>
-                                <p>방문객</p>
+                                <p>{AuthValid ? name : "이해준"}</p>
+                                <p>{AuthValid ? "방문객" : "여행안내자"}</p>
                                 </div>
                             </S.profileName>
                         </S.profileUser>
                 </S.profileView>
             
-                <S.logoutButton onClick={()=>setModal(true)}>로그아웃</S.logoutButton>
+                <S.logoutButton onClick={logout}>로그아웃</S.logoutButton>
             </S.mainProfile>
             
 

@@ -24,7 +24,7 @@ export const textFieldWrap = styled.div`
 ` 
 
 export const textField = styled.input`
-  margin-left: 13px;
+  margin-left: 10px;
   width: 90%;
   height: 90%;
   border-radius: 13px;

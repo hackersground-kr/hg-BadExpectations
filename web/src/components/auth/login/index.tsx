@@ -7,23 +7,20 @@ import * as Auth from "../start/style";
 import Polygon from "../../../assets/Polygon 2.png";
 import logo from "../../../assets/logo.svg";
 
+
 const Login = () => {
     const navigate = useNavigate();
-    const [users] = useAtom(usersAtom);
-    const [, setCurrentUser] = useAtom(currentUserAtom);
-    const [username, setUsername] = useState("");
+    const [userId, setuserId] = useState("");
     const [password, setPassword] = useState("");
 
     const handleLogin = () => {
-        const user = users.find(
-            (u) => u.username === username && u.password === password
-        );
-        if (user) {
-            setCurrentUser(user);
-            navigate("/home/");
-        } else {
-            navigate("/home/");
-            // alert("아이디 또는 비밀번호가 틀렸습니다.");
+        const userIdw = localStorage.getItem("signupUsername")
+        const usePw = localStorage.getItem("signupPassword")
+
+     
+        if (userId === userIdw && password === usePw) {
+            navigate("/home");   
+
         }
     };
 
@@ -37,8 +34,8 @@ const Login = () => {
                     <S.textFieldWrap>
                         <S.textField 
                             placeholder="아이디를 입력해주세요" 
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={userId}
+                            onChange={(e) => setuserId(e.target.value)}
                         />
                     </S.textFieldWrap>
                     <S.textFieldWrap>
@@ -52,7 +49,7 @@ const Login = () => {
                     <S.bottomWarp>
                         <S.startButton onClick={handleLogin}>시작</S.startButton>
                         <S.navText>
-                            <span onClick={() => navigate("/sign/name/")}>회원가입 하러 가기</span>
+                            <span onClick={() => navigate("/sign/name")}>회원가입 하러 가기</span>
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>

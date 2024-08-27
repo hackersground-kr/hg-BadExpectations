@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAtom } from "jotai";
-import { currentUserAtom } from "../../../store/user/user.atom";
-import * as S from "./style";
-import * as Auth from "../start/style";
 import Polygon from "../../../assets/Polygon 2.png";
 import logo from "../../../assets/logo.svg";
+import * as S from "./style";
+import * as Auth from "../start/style";
+import { useNavigate } from "react-router-dom";
 
-const Name= () => {
+const Name = () => {
     const navigate = useNavigate();
-    const [, setCurrentUser] = useAtom(currentUserAtom);
-    const [name, setName] = useState("");
+    const [name, setName] = useState<string>("");
 
     const handleNext = () => {
-        setCurrentUser((prev) => ({
-            ...prev,
-            name
-        }));
+        localStorage.setItem("signupName", name);
         navigate("/signup");
     };
 
@@ -41,13 +35,13 @@ const Name= () => {
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>
-                <img src={Polygon} alt="Polygon" />
+                <img src={Polygon} alt="Polygon"/>
             </Auth.main>
             <Auth.logoMain>
-                <Auth.logo src={logo} alt="Logo" />
+                <Auth.logo src={logo} alt="Logo"/>
             </Auth.logoMain>
         </S.login>
     );
-};
+}
 
 export default Name;
