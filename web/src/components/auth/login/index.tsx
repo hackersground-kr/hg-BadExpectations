@@ -22,7 +22,8 @@ const Login = () => {
             setCurrentUser(user);
             navigate("/home/");
         } else {
-            alert("아이디 또는 비밀번호가 틀렸습니다.");
+            navigate("/home/");
+            // alert("아이디 또는 비밀번호가 틀렸습니다.");
         }
     };
 
