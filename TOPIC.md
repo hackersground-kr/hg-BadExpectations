@@ -53,7 +53,7 @@
 	•	청년 유입 촉진: 매력적인 여행 콘텐츠와 챌린지를 통해 젊은 청년들의 의성 유입을 촉진합니다.
 
 ## 제품 아키텍처 (이미지)
-![나쁜기대치-제품-아키텍처 ](https://github.com/user-attachments/assets/ab4cce4d-cf6d-4ba6-bb5f-dd4fcb1ef0f8)
+![HackerGroundServiceArchitect](https://github.com/user-attachments/assets/bc946951-ded5-4555-9990-40fccbc843b6)
 
 ## 제품 소개 슬라이드
 https://github.com/hackersground-kr/hg-BadExpectations/blob/main/decks/%E1%84%82%E1%85%A1%E1%84%88%E1%85%B3%E1%86%AB%E1%84%80%E1%85%B5%E1%84%83%E1%85%A2%E1%84%8E%E1%85%B5_%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD.pdf
