@@ -2,11 +2,26 @@ import React, {useState} from 'react';
 import * as S from "./style";
 import headerLogo from "../../assets/headerLogo.svg";
 import userIcon from "../../assets/userIcon.svg";
-import {useLocation} from "react-router-dom";
 import LogoutModal from '../logoutmodal';
+import { useAtom } from "jotai";
+import { authType } from "../../store/authtype/authtype.atom";
+import { useNavigate } from "react-router-dom";
+
 
 const Profile =()=>{
+    const navigate = useNavigate();
     const [modal, setModal]=useState(false);
+    const [AuthValid, setAuthValid] = useAtom(authType);
+    const consumerAuth = ()=>{
+        setAuthValid((prev)=>!prev);
+      
+   
+    }
+    const name = localStorage.getItem("signupName")
+    const logout=()=>{
+        setModal(true)
+   
+    }
 return(
 <>
     <S.main>
@@ -64,14 +79,14 @@ return(
                             <img src={userIcon} alt="img" />
                             <S.profileName>
                                 <div>
-                                <p>이해준</p>
-                                <p>방문객</p>
+                                <p>{AuthValid ? name : "이해준"}</p>
+                                <p>{AuthValid ? name : "없음"}</p>
                                 </div>
                             </S.profileName>
                         </S.profileUser>
                 </S.profileView>
             
-                <S.logoutButton onClick={()=>setModal(true)}>로그아웃</S.logoutButton>
+                <S.logoutButton onClick={logout}>로그아웃</S.logoutButton>
             </S.mainProfile>
             
 

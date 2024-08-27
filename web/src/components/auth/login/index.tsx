@@ -10,23 +10,16 @@ import logo from "../../../assets/logo.svg";
 
 const Login = () => {
     const navigate = useNavigate();
-    const [users] = useAtom(usersAtom);
-    const [, setCurrentUser] = useAtom(currentUserAtom);
-    const [username, setUsername] = useState("");
+    const [userId, setuserId] = useState("");
     const [password, setPassword] = useState("");
 
     const handleLogin = () => {
-        const user = users.find(
-            (u) => u.username === username && u.password === password
-        );
-        if (user) {
-            setCurrentUser(user);
-            console.log(user);
-            
-            navigate("/home");
-            
-        } else if(username === "test" && password === "1234"){
-            navigate("/home");
+        const userIdw = localStorage.getItem("signupUsername")
+        const usePw = localStorage.getItem("signupPassword")
+
+     
+        if (userId === userIdw && password === usePw) {
+            navigate("/home");   
         }
     };
 
@@ -40,8 +33,8 @@ const Login = () => {
                     <S.textFieldWrap>
                         <S.textField 
                             placeholder="아이디를 입력해주세요" 
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={userId}
+                            onChange={(e) => setuserId(e.target.value)}
                         />
                     </S.textFieldWrap>
                     <S.textFieldWrap>

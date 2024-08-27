@@ -1,25 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAtom } from "jotai";
-import { currentUserAtom } from "../../../store/user/user.atom";
-import * as S from "./style";
-import * as Auth from "../start/style";
 import Polygon from "../../../assets/Polygon 2.png";
 import logo from "../../../assets/logo.svg";
+import * as S from "./style";
+import * as Auth from "../start/style";
+import { useNavigate } from "react-router-dom";
 
 const Default= () => {
     const navigate = useNavigate();
-    const [, setCurrentUser] = useAtom(currentUserAtom);
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
 
     const handleNext = () => {
-        setCurrentUser((prev) => ({
-            ...prev,
-            username,
-            password
-        }));
-        navigate("/sign/number/");
+        localStorage.setItem("signupUsername", username);
+        localStorage.setItem("signupPassword", password);
+        navigate("/sign/number");
     };
 
     return (
@@ -47,17 +41,17 @@ const Default= () => {
                     <S.bottomWarp>
                         <S.startButton onClick={handleNext}>다음</S.startButton>
                         <S.navText>
-                            <span onClick={() => navigate("/sign/")}>로그인 하러 가기</span>
+                            <span onClick={() => navigate("/sign")}>로그인 하러 가기</span>
                         </S.navText>
                     </S.bottomWarp>
                 </S.buttonMain>
-                <img src={Polygon} alt="Polygon" />
+                <img src={Polygon} alt="Polygon"/>
             </Auth.main>
             <Auth.logoMain>
-                <Auth.logo src={logo} alt="Logo" />
+                <Auth.logo src={logo} alt="Logo"/>
             </Auth.logoMain>
         </S.login>
     );
-};
+}
 
 export default Default;
