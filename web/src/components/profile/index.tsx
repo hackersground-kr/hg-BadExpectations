@@ -6,7 +6,7 @@ import LogoutModal from '../logoutmodal';
 import { useAtom } from "jotai";
 import { authType } from "../../store/authtype/authtype.atom";
 import { useNavigate } from "react-router-dom";
-
+import cancel from "../../assets/cancel.svg";
 
 const Profile =()=>{
     const navigate = useNavigate();
@@ -35,9 +35,10 @@ return(
                     justifyContent: 'flex-end',
                 }}>
                     <div style={{display: "flex", flexDirection: "column", width: 304, height: 78}}>
-                        <div style={{display: "flex", flexDirection: "row", width: 98, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
+                        <div style={{display: "flex", flexDirection: "row", width: 280, height: 28, justifyContent: "space-between", alignItems: "flex-end"}}>
                             <img src={headerLogo} alt="Logo" style={{width: 26, height: 28, marginLeft: 5}}/>
-                            <text style={{fontSize: 16, fontWeight: '800', color: "#FFA800"}}>의성올래</text>
+                            <text style={{fontSize: 16, fontWeight: '800', color: "#FFA800", marginRight:150}}>의성올래</text>
+                            <img onClick={()=>navigate("/home")} src={cancel} alt="cancel" style={{width: 18, height: 18, marginLeft:8, }} />
                         </div>
                         <div style={{width: 1, height: 25}}></div>
                         <div style={{
@@ -80,7 +81,7 @@ return(
                             <S.profileName>
                                 <div>
                                 <p>{AuthValid ? name : "이해준"}</p>
-                                <p>{AuthValid ? name : "없음"}</p>
+                                <p>{AuthValid ? "방문객" : "여행안내자"}</p>
                                 </div>
                             </S.profileName>
                         </S.profileUser>
