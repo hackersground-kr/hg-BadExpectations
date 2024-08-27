@@ -1,3 +1,4 @@
+
 name: Deploy to Azure Container Apps
 
 on:
@@ -34,13 +35,10 @@ jobs:
           sed -i 's#{DB_URL}#${{ secrets.DB_URL }}#' server/src/main/resources/application.yml
           sed -i 's#{DB_USERNAME}#${{ secrets.DB_USERNAME }}#' server/src/main/resources/application.yml
           sed -i 's#{DB_PASSWORD}#${{ secrets.DB_PASSWORD }}#' server/src/main/resources/application.yml
-
       - name: Build with Gradle
         run: |
           cd server
           ./gradlew build -x test
-
-
       - name: Install azd
         uses: Azure/setup-azd@v1.0.0
 
@@ -58,7 +56,6 @@ jobs:
         run: |
           $info = $Env:AZURE_CREDENTIALS | ConvertFrom-Json -AsHashtable;
           Write-Host "::add-mask::$($info.clientSecret)"
-
           azd auth login `
             --client-id "$($info.clientId)" `
             --client-secret "$($info.clientSecret)" `

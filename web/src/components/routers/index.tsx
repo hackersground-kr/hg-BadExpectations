@@ -13,6 +13,7 @@ import Profile from "../profile/index";
 import Home from "../../page/home";
 import Search from "../../page/search";
 import SearchQuestion from "../../page/search/question";
+import Subscription from "../../page/subscription/index";
 
 const Router=()=>{
     return(
@@ -32,6 +33,7 @@ const Router=()=>{
                 <Route path="/profile" element={<Profile />}/>
                 <Route path="/search" element={<Search />}/>
                 <Route path="/search/question/" element={<SearchQuestion />}/>
+                <Route path="/subscribe/" element={<Subscription />}/>
             </Routes>
         </BrowserRouter>
     )

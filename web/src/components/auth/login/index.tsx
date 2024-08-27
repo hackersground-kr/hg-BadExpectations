@@ -20,6 +20,7 @@ const Login = () => {
      
         if (userId === userIdw && password === usePw) {
             navigate("/home");   
+
         }
     };
 
