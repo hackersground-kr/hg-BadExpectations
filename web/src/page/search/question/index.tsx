@@ -8,7 +8,8 @@ import selectorImg3 from "../../../assets/Group 43.svg";
 import selectorImg4 from "../../../assets/Group 44.svg";
 import plusIcon from "../../../assets/Group 45 (1).svg";
 import minusIcon from "../../../assets/Group 46 (1).svg";
-import Number from "../../../components/auth/number";
+import {useAtom} from "jotai";
+import {isRender} from "../../../store/authtype/authtype.atom";
 
 const SearchQuestion = () => {
     const getDaysInMonth = (year: number, month: number) => {
@@ -42,6 +43,8 @@ const SearchQuestion = () => {
     for (let d = new Date(startOfFirstWeek); d <= endOfLastWeek; d.setDate(d.getDate() + 1)) {
         days.push(new Date(d));
     }
+
+    const [isRend, setIsRend] = useAtom(isRender);
 
     const [adults, setAdults] = useState<number>(0);
     const [children, setChildren] = useState<number>(0);
@@ -82,6 +85,14 @@ const SearchQuestion = () => {
             setEndDate(null);
         }
     };
+
+    const [rr, sr] = useState<boolean>(false);
+
+
+    useEffect(() => {
+        rr && navigate("/search")
+        sr(false)
+    }, [rr])
 
     const isDateInRange = (date: string) => {
         if (startDate && endDate) {
@@ -377,7 +388,10 @@ const SearchQuestion = () => {
                     setEndDate(null);
                     setIndexSelector(0)
                 }}>전체 초기화</span>
-                <div style={{display: 'flex' ,width: 105, height: "100%", backgroundColor: '#FFA800', alignItems: 'center', justifyContent: 'center', color: "#FFF", fontWeight: "600"}} onClick={() => {console.log(adults, children, baby, pet, startDate, endDate, indexSelectorNum)}}>
+                <div style={{display: 'flex' ,width: 105, height: "100%", backgroundColor: '#FFA800', alignItems: 'center', justifyContent: 'center', color: "#FFF", fontWeight: "600"}} onClick={() => {
+                    setIsRend(true)
+                    sr(true)
+                }}>
                     검색하기
                 </div>
             </div>

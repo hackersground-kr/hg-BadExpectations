@@ -210,7 +210,7 @@ export const DetailText = styled.input`
 `;
 
 export const PhotoUpload = styled.div`
-  margin-top: 20px;
+  margin-top: 5px;
 `;
 
 export const OptionContainer = styled.div`
@@ -258,4 +258,103 @@ export const SubmitButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
+`;
+
+
+export const CustomCalendar = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    margin-top: 25px;
+`;
+
+export const CalendarHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
+`;
+
+export const HeaderButton = styled.button`
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+`;
+
+export const DayWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(7, minmax(43px, 0.8fr));
+    grid-row-gap: 13px;
+`;
+
+export const CalendarItem = styled.div<{ $isSunday: boolean }>`
+    color: ${props => (props.$isSunday ? 'red' : 'black')};
+    margin-bottom: 12px;
+`;
+
+export const Day = styled.div<{
+    $isCurrentMonth: boolean;
+    $isSelectedDate: boolean;
+    $isInRange: boolean;
+    $isSunday: boolean
+}>`
+    opacity: ${props => (props.$isCurrentMonth ? '1' : '0.5')};
+    background-color: ${props => (props.$isSelectedDate ? 'rgba(255,168,0,0.37)' : props.$isInRange ? 'rgba(255,168,0,0.2)' : 'transparent')};
+    color: ${props => (props.$isSunday ? 'red' : 'black')};
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    margin-left: -10px;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const SelectedDate = styled.span`
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-left: -6.4px;
+    margin-top: -40px;
+`;
+
+export const HeaderText = styled.span`
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffa800;
+    margin-bottom: -3px;
+`;
+
+export const SelectCategoryListContainer = styled.div`
+    margin-top: 16px;
+    overflow: hidden;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
+
+export const ScrollContent = styled.div`
+    display: inline-block;
+`;
+
+export const Item = styled.div<{ bgColor?: string }>`
+    display: inline-block;
+    width: 100px;
+    height: 130px;
+    margin-right: 15px;
+    border-radius: 10px;
 `;
